@@ -2,10 +2,10 @@ import React from 'react';
 
 const ColourSelector = (props) => {
   const { config, selectNextBackground } = props
-  const { background } = config;
+  const { background,label} = config;
   return (
-    <button className='colorsleceter' onClick={() => selectNextBackground({background: background})}>
-      {/* label should come here */}
+    <button className='colorselecter' onClick={() => selectNextBackground({background: background})}>
+      {background,label}
     </button>
   )
 }
