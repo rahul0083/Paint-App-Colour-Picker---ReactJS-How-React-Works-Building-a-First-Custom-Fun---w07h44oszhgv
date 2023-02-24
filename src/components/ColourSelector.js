@@ -3,11 +3,12 @@ import React,{useState} from 'react';
 
 const ColourSelector = (props) => {
   const { config, selectNextBackground } = props
-  const [backgroundbox,setbackgroundbox]=useState();
+ 
 
-  const { background,label} = config;
+
+  const { background} = config;
   return (
-    <button className='colorselecter' style={{"background":backgroundbox}}onClick={() => {selectNextBackground({background: background});setbackgroundbox(background)}}>
+    <button className={config.classname} onClick={() => {selectNextBackground({background: background})}}>
       {config.label}
     </button>
   )
